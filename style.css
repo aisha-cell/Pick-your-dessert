@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* html, body {
+  overflow-x: hidden;
+} */
+
+body {
+    font-family: 'Baloo 2', cursive;
+    color: #5b352a;
+    background-color: #fafafa;
+}
+
+#top {
+    background-color: #f7c88b;
+    text-align: center;
+    padding: 15px 0;
+}
+
+#top h1 {
+    color: rgb(121, 25, 25);
+    font-size: 40px;
+    font-weight: 900;
+    word-spacing: 5px;
+}
+
+#top h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+nav {
+    padding: 15px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #5b352a;
+    font-size: 20px;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    background-color: #f7ead9;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+    background-color: #e7dec7fc;
+    transform: scale(1.1);
+}
+
+#container {
+    max-width: 1000px;
+    width: 100%;
+    margin:20px auto 20px auto;
+    padding: 20px;
+    background-color: #fdf6ec;
+    border-radius: 20px;
+    box-shadow: -1px 1px 20px 9px #d8dcdcf0;
+    display: block;
+}
+
+.dessert {
+    padding: 20px 10px;
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+    border-bottom: 1px solid #e2d8c0;
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+}
+
+.images img {
+    width: 230px;
+    height: 200px;
+    border-radius: 30px;
+    box-shadow: 4px 6px 20px 9px #d9dbda;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.images img:hover {
+    transform: scale(1.05);
+    box-shadow: 6px 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.data {
+    flex: 1 1 400px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 250px;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.data h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.data p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.data h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.Ingredients {
+    margin-left: 20px;
+    font-size: 18px;
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.Ingredients li {
+    margin-bottom: 6px;
+}
+
+.dessert a {
+    text-decoration: none;
+    color: rgb(121, 25, 25);
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* 📱 Responsive Design */
+
+@media screen and (max-width: 1100px) {
+    .dessert {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .images {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .images img {
+        width: 60%;
+        max-width: 200px;
+        margin: 10px;
+    }
+
+    .data {
+        width: 90%;
+        max-width: 95%;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        width: 80%;
+        text-align: center;
+        margin: 6px 0;
+    }
+
+    .images img {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #container {
+        width: 100%;
+        padding: 10px;
+        margin: 10px auto;
+        box-shadow: none;
+        /* optional: remove for less width pressure */
+    }
+
+    .dessert {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 10px !important;
+        padding: 10px 0 !important;
+        margin: 10px 0 !important;
+    }
+
+    .images {
+        width: 80% !important;
+        display: flex;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 0;
+        gap: 10px !important;
+    }
+
+    .images img {
+        width: 80% !important;
+        max-width: 320px;
+        height: 200px;
+    }
+
+    .data {
+        width: 100% !important;
+        max-width: 320px !important;
+        padding: 0 5px !important;
+        margin: 0;
+    }
+
+    .data h1,
+    .data p,
+    .data h2 {
+        text-align: center !important;
+    }
+
+    .ingredients {
+        text-align: left !important;
+        padding-left: 20px !important;
+        margin: 10px auto !important;
+    }
+
+    nav a {
+        width: 90% !important;
+        font-size: 16px !important;
+        margin: 6px auto !important;
+        display: block !important;
+    }
+
+    #top h1 {
+        font-size: 24px !important;
+        padding: 10px 0 !important;
+    }
+
+    #top h3 {
+        font-size: 14px !important;
+    }
+}
